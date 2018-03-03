@@ -5,7 +5,8 @@
 1. clone repo
 2. npm install
 3. create db named blogger in mySQL workbench or SequelPro
-4. node server.js
+4. update the config file with your sql credentials
+5. node server.js
 
 This project renders views in two different ways so you can choose how you want to code!
 
