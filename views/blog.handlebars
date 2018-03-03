@@ -1,0 +1,32 @@
+<div class="container blog">
+  <div class="row">
+    <div class="col-md-2 col-sm-2">
+      <a class="btn btn-default" href="/cms">New Post</a>
+    </div>
+    <div class="col-md-2 col-sm-2">
+      <a class="btn btn-default" href="/authors">Manage Authors</a>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12 blog-container">
+      {{#each posts}}
+        <div class="panel panel-default" data-post="{{id}}">
+          <div class="panel-heading">
+            <button class="delete btn btn-danger">x</button>
+            <button class="edit btn btn-info">EDIT</button>
+            <h2>{{title}}</h2>
+              <small>{{createdAt}}</small>
+            </h2>
+            <h5 style="float: right; color: blue; margin-top: -10px;">Written by: {{Author.name}} </h5>
+          </div>
+          <div class="panel-body">
+            <p>{{body}}</p>
+          </div>
+        </div>
+      {{/each}}
+    </div>
+  </div>
+</div>
+<!-- Custom Script -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.17.0/moment.min.js" type="text/javascript"></script>
+<script src="js/blog.js" type="text/javascript"></script>
